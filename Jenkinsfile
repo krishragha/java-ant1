@@ -16,7 +16,7 @@ post
 {
 always{
 
-archive'dist/*.jar'
+archiveArtifacts artifacts: 'dist/*.jar', fingerprints: true
 }
 
 }
