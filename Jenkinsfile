@@ -30,9 +30,7 @@ success {
 archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
 }
 }
-
-
-
+}
 }
 
 stage('deploy') {
