@@ -43,7 +43,7 @@ sh "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/"
 }
 }
 stage("Running on CentOS") {
-agent any  {
+agent "salve5"  {
 label 'CentOS'
 
 docker 'openjdk:8u141-jre'
