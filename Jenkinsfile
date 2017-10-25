@@ -62,8 +62,6 @@ stage("Test on debian"){
 
 agent  {
 
-label "CentOS"
-
 docker 'openjdk:8u141-jre'
 
 }
