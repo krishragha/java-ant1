@@ -53,5 +53,20 @@ sh "wget http://krishragha1.mylabserver.com/rectangles/all/rectangle_${env.BUILD
 sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 5"
 }
 }
+
+stage("Test on Debian")
+{
+agent {
+docker 'openjdk:8u141-jre'
+}
+
+steps {
+
+sh "wget https://krishragha1.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
+
+sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 6"
+}
+}
+
 }
 }
