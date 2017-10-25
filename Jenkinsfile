@@ -68,9 +68,9 @@ docker 'openjdk:8u141-jre'
 
 steps {
 
-sh "wget http://krishragha1.mylabserver.com/rectangles/all/rectangle_${env.BUID_NUMBER}.jar"
+sh "wget http://krishragha1.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
 
-sh "java -jar rectangle_${env.BUILD_NUMBER}.JAR 3 10"
+sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 10"
 }
 }
 
