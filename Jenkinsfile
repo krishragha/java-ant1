@@ -58,5 +58,14 @@ sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 5"
 }
 
 
+stage("Test on debian"){
+
+agent any {
+
+docker 'openjdk:8u141-jre'
+
+}
+}
+
 }
 }
