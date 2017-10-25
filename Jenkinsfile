@@ -59,10 +59,10 @@ stage("Test on Debian")
 agent {
 
 label 'CentOS'
-}
-steps {
 
 docker 'openjdk:8u141-jre'
+}
+steps {
 
 sh "wget https://krishragha1.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
 
