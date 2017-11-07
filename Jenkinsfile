@@ -46,7 +46,6 @@ stage("Running on CentOS") {
 agent   {
 label 'CentOS'
 
-
 }
 
 steps {
@@ -56,9 +55,6 @@ sh "wget http://krishragha1.mylabserver.com/rectangles/all/rectangle_${env.BUILD
 sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 5"
 }
 }
-
-
-
-
 }
 }
+
